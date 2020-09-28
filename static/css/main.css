@@ -9,6 +9,20 @@
     padding-bottom: 5em !important;
 }
 
+.main-margin-tb-mini {
+    margin-top: 0.3em !important;
+    margin-bottom: 0.3em !important;
+}
+
+.main-margin-tb-massive {
+    margin-top: 5em !important;
+    margin-bottom: 5em !important;
+}
+
+.main-margin-massive {
+    margin: 2em 5em !important;
+}
+
 
 /* ----Text---- */
 
