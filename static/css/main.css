@@ -1,0 +1,22 @@
+.main-padding-tb-mini {
+    padding-top: 0.2em !important;
+    padding-bottom: 0.2em !important;
+
+}
+
+.main-padding-tb-massive {
+    padding-top: 5em !important;
+    padding-bottom: 5em !important;
+}
+
+.main-text-thin {
+    font-weight: 300 !important;
+}
+
+.main-text-space {
+    letter-spacing: 1px !important
+}
+
+.main-opacity-mini {
+    opacity: 0.7 !important
+}
