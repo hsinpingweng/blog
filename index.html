@@ -11,13 +11,14 @@
 <!--    Navigation bar-->
     <nav class="ui inverted attached segment">
         <div class="ui container">
-            <div class="ui inverted secondary menu">
+            <div class="ui inverted secondary stackable menu">
                 <h2 class="ui yellow header">Blog</h2>
-                <a href="#" class="item"><i class="home icon"></i>Main</a>
-                <a href="#" class="item"><i class="idea icon"></i>Category</a>
-                <a href="#" class="item"><i class="tags icon"></i>Tag</a>
-                <a href="#" class="item"><i class="info icon"></i>About Me</a>
-                <div class="right item">
+                <a href="#" class="menu-item item main-mobile-hide"><i class="home icon"></i>Main</a>
+                <a href="#" class="menu-item item main-mobile-hide"><i class="idea icon"></i>Category</a>
+                <a href="#" class="menu-item item main-mobile-hide"><i class="tags icon"></i>Tag</a>
+                <a href="#" class="menu-item item main-mobile-hide"><i class="clone icon"></i>Archive</a>
+                <a href="#" class="menu-item item main-mobile-hide"><i class="info icon"></i>About Me</a>
+                <div class="right menu-item item main-mobile-hide">
                     <div class="ui icon inverted transparent input">
                         <input type="text" placeholder="Search...">
                         <i class="search link icon"></i>
@@ -25,11 +26,14 @@
                 </div>
             </div>
         </div>
+        <a href="#" class="ui menu toggle black icon button main-top-right main-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
     </nav>
 <!--Main-->
     <div>
         <div class="ui container main-margin-massive">
-            <div class="ui grid">
+            <div class="ui stackable grid">
                 <!--left block-->
                 <div class="eleven wide column">
                     <!--left block header-->
@@ -48,7 +52,7 @@
                     <!--left block content-->
                     <div class="ui attached segment">
                         <div class="ui vertical segment">
-                            <div class="ui grid">
+                            <div class="ui mobile reversed stackable grid">
                                 <div class="ui eleven wide column">
                                     <h3 class="ui header">Northern Lights put on a stunning display over Finland</h3>
                                     <p>Locals and tourists in the city of Rovaniemi in Finland's Lapland were treated to a magnificent display of colourful Northern Lights in the Arctic sky overnight from Friday to Saturday last weekend. source from: RTE.ie
@@ -90,7 +94,7 @@
                             </div>
                         </div>
                         <div class="ui vertical segment">
-                            <div class="ui grid">
+                            <div class="ui mobile reversed stackable grid">
                                 <div class="ui eleven wide column">
                                     <h3 class="ui header">Northern Lights put on a stunning display over Finland</h3>
                                     <p>Locals and tourists in the city of Rovaniemi in Finland's Lapland were treated to a magnificent display of colourful Northern Lights in the Arctic sky overnight from Friday to Saturday last weekend. source from: RTE.ie
@@ -132,7 +136,7 @@
                             </div>
                         </div>
                         <div class="ui vertical segment">
-                            <div class="ui grid">
+                            <div class="ui mobile reversed stackable grid">
                                 <div class="ui eleven wide column">
                                     <h3 class="ui header">Northern Lights put on a stunning display over Finland</h3>
                                     <p>Locals and tourists in the city of Rovaniemi in Finland's Lapland were treated to a magnificent display of colourful Northern Lights in the Arctic sky overnight from Friday to Saturday last weekend. source from: RTE.ie
@@ -174,7 +178,7 @@
                             </div>
                         </div>
                         <div class="ui vertical segment">
-                            <div class="ui grid">
+                            <div class="ui mobile reversed stackable grid">
                                 <div class="ui eleven wide column">
                                     <h3 class="ui header">Northern Lights put on a stunning display over Finland</h3>
                                     <p>Locals and tourists in the city of Rovaniemi in Finland's Lapland were treated to a magnificent display of colourful Northern Lights in the Arctic sky overnight from Friday to Saturday last weekend. source from: RTE.ie
@@ -216,7 +220,7 @@
                             </div>
                         </div>
                         <div class="ui vertical segment">
-                            <div class="ui grid">
+                            <div class="ui mobile reversed stackable grid">
                                 <div class="ui eleven wide column">
                                     <h3 class="ui header">Northern Lights put on a stunning display over Finland</h3>
                                     <p>Locals and tourists in the city of Rovaniemi in Finland's Lapland were treated to a magnificent display of colourful Northern Lights in the Arctic sky overnight from Friday to Saturday last weekend. source from: RTE.ie
@@ -322,11 +326,23 @@
                         </div>
                     </div>
                     <!--Recommend-->
-                    <div class="ui segment">
-
+                    <div class="ui segments">
+                        <div class="ui secondary segment">
+                            <i class="bookmark icon"></i> Recommend
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank" class="main-black main-text-thin">User Story</a>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank" class="main-black main-text-thin">User Story</a>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank" class="main-black main-text-thin">User Story</a>
+                        </div>
                     </div>
 
                     <!--QRCode-->
+
                 </div>
 
             </div>
@@ -337,7 +353,7 @@
 <!--footer-->
     <footer class="ui inverted vertical segment main-padding-tb-massive">
         <div class="ui center aligned container">
-            <div class="ui inverted divided grid">
+            <div class="ui inverted divided stackable grid">
                 <div class="three wide column">
                     <div class="ui inverted link list">
                         <div class="item">
@@ -374,5 +390,10 @@
 
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $('.menu.toggle').click(function(){
+        $('.menu-item').toggleClass('main-mobile-hide')
+    });
+</script>
 </body>
 </html>
