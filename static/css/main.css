@@ -41,8 +41,8 @@
     margin-bottom: 5em !important;
 }
 
-.main-margin-massive {
-    margin: 2em 5em !important;
+.margin-s {
+    margin: 0.2em 0.5em !important;
 }
 
 .main-margin-b-s {
@@ -88,20 +88,27 @@
     .main-mobile-hide {
         display: none !important
     }
+
     .main-mobile-show {
         display: block !important
     }
+
     .main-padding-lr {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 
-    .mobile-wide {
-        width: 100% !important
+    .main-mobile-lr-clear {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 
+    .mobile-wide {
+        width: 100% !important;
+    }
 }
 
-
-
+.shadow-s {
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important
 }
