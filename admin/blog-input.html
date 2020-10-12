@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/lib/editormd/css/editormd.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <title>Background Management</title>
 </head>
@@ -65,7 +66,20 @@
                 </div>
             </div>
             <div class="field">
-                <textarea placeholder="Content" name="content"></textarea>
+                <div id="md-content">
+                    <textarea placeholder="Content" name="content" style="display: none">
+
+
+                        #### Disabled options
+
+                        - TeX (Based on KaTeX);
+                        - Emoji;
+                        - Task lists;
+                        - HTML tags decode;
+                        - Flowchart and Sequence Diagram;
+                    </textarea>
+                </div>
+
             </div>
             
             <div class="two fields">
@@ -134,7 +148,6 @@
                 <button class="ui secondary button">Save</button>
                 <button class="ui teal button">Post</button>
             </div>
-
         </form>
     </div>
 </div>
@@ -177,8 +190,21 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="../static/lib/editormd/editormd.min.js"></script>
 
 <script>
+
+    // init markdown
+    var testEditor;
+    $(function() {
+        testEditor = editormd("md-content", {
+            width   : "100%",
+            height  : 640,
+            syncScrolling : "single",
+            path    : "../static/lib/editormd/lib/"
+        });
+    });
+
     $('.menu.toggle').click(function(){
         $('.menu-item').toggleClass('main-mobile-hide')
     });
